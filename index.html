@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>&lt;model-viewer&gt; template</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Ar</a></li>
+
+      </ul>
+      <img class="logo" src="images/logo.png" alt="logo">
+    </nav>
+
+
+  </header>
+
+  <!-- <div class="text-container"> -->
+  <div class="hero-text">
+    <h1 id="head-text">Reimaging Reality</h1>
+
+    <p id="sub-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, natus animi voluptatem nihil
+      aliquid quisquam iste aliquam dignissimos quibusdam nemo!</p>
+
+    <!-- </div> -->
+
+
+  </div>
+  <div class="main-Container">
+    <!-- <model-viewer> HTML element -->
+    <div class="first-model">
+      <model-viewer src="digestive-system.glb" ios-src="digestive-system.usdz" ar
+        ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.png"
+        shadow-intensity="1" auto-rotate>
+
+        <button class="Hotspot" slot="hotspot-1"
+          data-position="3.0294768130872156m 62.07256312277513m -2.5060399417163097m"
+          data-normal="-0.011033496169439255m 0.4948636749122475m 0.8689005726863257m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Euosophagus</div>
+        </button><button class="Hotspot" slot="hotspot-2"
+          data-position="7.87828019728503m 34.123885163166975m 2.8845808582217884m"
+          data-normal="0.5373083477527675m -0.2994689070757862m 0.788427620730036m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Stomach</div>
+        </button><button class="Hotspot" slot="hotspot-3"
+          data-position="8.463421229294614m 21.611050965063207m 2.352799490131467m"
+          data-normal="0.4255701987804234m 0.042005434071177926m 0.9039499706391294m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Small intestine</div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" class="ar-button">
+          View in your space
+        </button>
+        <div id="ar-prompt">
+          <img src="ar_hand_prompt.png" alt="hand prompt">
+        </div>
+
+      </model-viewer>
+    </div>
+
+    <div class="second-model">
+      <!-- <model-viewer> HTML element -->
+      <model-viewer src="plant cell.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        poster="poster.webp" shadow-intensity="1" auto-rotate>
+        <button class="Hotspot" slot="hotspot-1"
+          data-position="0.08506337892201146m -0.06322881851608328m 0.30266862832868635m"
+          data-normal="0.010709111015614205m 0.6117547813191638m 0.7909749695624998m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Mitochondrion</div>
+        </button><button class="Hotspot" slot="hotspot-2"
+          data-position="0.13642986578057864m -0.1260268070875859m 0.31737624827042216m"
+          data-normal="-0.4442781248767603m -0.7165963353438523m 0.5376863769222271m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cell wall</div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" class="ar-button">
+          View in your space
+        </button>
+        <div id="ar-prompt">
+          <img src="ar_hand_prompt.png" alt="ar hand">
+        </div>
+      </model-viewer>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</body>
+
+</html>
